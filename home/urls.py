@@ -15,4 +15,5 @@ urlpatterns = [
     path('category/<slug:category_slug>/', views.HomeView.as_view(), name='category_filter'),
     path('bucket/', include(bucket_urlpatterns)),
     path('<slug:slug>/', views.ProductDetileView.as_view(), name='product_detile'),
+    path('contact', views.HomeContactView.as_view(), name='contact_view'),
 ]

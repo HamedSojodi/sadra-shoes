@@ -79,3 +79,7 @@ class DownloadBucketObject(IsAdminUsermixin, View):
         tasks.download_obj_bucket_task(key)
         messages.success(request, 'your object will be download soon', 'info')
         return redirect('home:bucket')
+
+class HomeContactView(View):
+    def get(self, request):
+        return render(request, 'home/contact.html')
