@@ -1,0 +1,82 @@
+{#<nav class="navbar navbar-expand-lg navbar-dark bg-dark">#}
+{#    <div class="container-fluid">#}
+{#        <div class="navbar-nav">#}
+{#            <a class="nav-link active" href="{% url 'home:home' %}">Home</a>#}
+{#            {% if request.user.is_authenticated %}#}
+{#                <a class="nav-link active" href="{% url 'account:user_logout' %}">Logout</a>#}
+{#            {% else %}#}
+{#                <a class="nav-link active" href="{% url 'account:user_register' %}">Register</a>#}
+{#                <a class="nav-link active" href="{% url 'account:user_login' %}">Login</a>#}
+{#            {% endif %}#}
+{#            {% if request.user.is_admin %}#}
+{#                <a class="nav-link active" href="{% url 'home:bucket' %}">Bucket</a>#}
+{#            {% endif %}#}
+{#            <a class="nav-link active" href="{% url 'orders:cart' %}">CART {{ cart|length }}</a>#}
+{#        </div>#}
+{#    </div>#}
+{#</nav>#}
+
+
+
+<!-- Topbar Start -->
+<div class="container-fluid">
+    <div class="row bg-secondary py-2 px-xl-5">
+        <div class="col-lg-6 d-none d-lg-block">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-dark" href="">FAQs</a>
+                <span class="text-muted px-2">|</span>
+                <a class="text-dark" href="">Help</a>
+                <span class="text-muted px-2">|</span>
+                <a class="text-dark" href="">Support</a>
+            </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+
+                <a class="text-dark px-2" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="text-dark px-2" href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center py-3 px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+            <a href="" class="text-decoration-none">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                        class="text-primary font-weight-bold border px-3 mr-1">Sadra</span>Shop</h1>
+            </a>
+        </div>
+
+        <div class="col-lg-6 col-6 text-left">
+            <form action="" method="get">
+
+                <div class="input-group">
+                    <label for="id_search"></label>
+                    <input type="text" name="search" required="" id="id_search" class="form-control"
+                           placeholder="Search for products">
+                    <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <button style="background-color:white;border: white;color: lightcoral "
+                                        class="fa fa-search" type="submit"></button>
+
+                            </span>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-3 col-6 text-right">
+            <a href="{% url 'orders:cart' %}" class="btn border">
+                <i class="fas fa-shopping-cart text-primary"></i>
+                <span class="badge">{{ cart|length }}</span>
+            </a>
+
+        </div>
+    </div>
+</div>
