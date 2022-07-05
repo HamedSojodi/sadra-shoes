@@ -7,3 +7,4 @@ admin.site.register(Category)
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     raw_id_fields = ('category',)
+    list_display = ('name', 'created', 'updated')
