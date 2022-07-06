@@ -35,7 +35,7 @@ class CartRemoveView(View):
         cart = Cart(request)
         product = get_object_or_404(Product, id=product_id)
         cart.remove(product)
-        return redirect('orders:cart')
+        return redirect('home:home')
 
 
 class DetailOrderView(LoginRequiredMixin, View):
