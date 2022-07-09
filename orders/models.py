@@ -11,6 +11,7 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     discount = models.IntegerField(blank=True, null=True, default=None)
+    shipping = models.IntegerField(blank=True, null=True, default=300000)
 
     class Meta:
         ordering = ('paid', '-updated')
@@ -24,6 +25,10 @@ class Order(models.Model):
         if self.discount:
             discount_price = (self.discount / 100) * total
             return int(total - discount_price)
+        return total +self.shipping
+
+    def get_sub_total_price(self):
+        total = sum(item.get_cost() for item in self.items.all())
         return total
 
 
