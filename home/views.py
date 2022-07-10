@@ -20,12 +20,13 @@ class HomeView(View):
         if category_slug:
             category = Category.objects.get(slug=category_slug)
             products = products.filter(category=category)
-        else:
-            print('not fond')
         if request.GET.get('search'):
             products = products.filter(body__contains=request.GET['search'])
         return render(request, 'home/home.html', {'products': products,
                                                   'categories': categories, 'form': self.form_class})
+    #
+    # def post(self, request):
+    #     images =
 
 
 # class HomeView(TemplateView):
@@ -41,22 +42,28 @@ class HomeView(View):
 #         return context
 
 
-# class ProductDetileView(View):
-#     def get(self, request, slug):
-#         form = CartAddForm()
-#         product = get_object_or_404(Product, slug=slug)
-#         return render(request, 'home/detile.html', {'product': product, 'form': form})
+class ProductDetileView(View):
+    def get(self, request, slug,category_slug=None):
+        form = CartAddForm()
+        product = get_object_or_404(Product, slug=slug)
+        products = Product.objects.filter(available=True)
+        categories = Category.objects.filter(is_sub=False)
+        if category_slug:
+            category = Category.objects.get(slug=category_slug)
+            products = products.filter(category=category)
+        return render(request, 'home/detile.html', {'product': product, 'form': form,'products': products,
+                                                  'categories': categories})
 
-
-class ProductDetileView(DetailView):
-    model = Product
-    template_name = 'home/detile.html'
-    context_object_name = 'product'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form'] = CartAddForm()
-        return context
+#
+# class ProductDetileView(DetailView):
+#     model = Product
+#     template_name = 'home/detile.html'
+#     context_object_name = 'product'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['form'] = CartAddForm()
+#         return context
 
 
 class BucketHome(IsAdminUsermixin, View):

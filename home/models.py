@@ -4,7 +4,8 @@ from ckeditor.fields import RichTextField
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.utils.text import slugify
-from django_resized import ResizedImageField
+from colorfield.fields import ColorField
+
 
 class Category(models.Model):
     sub_category = models.ForeignKey('self', on_delete=models.CASCADE, related_name='scategory',
@@ -34,12 +35,18 @@ def my_handler(sender, instance, *args, **kwargs):
 
 
 class Product(models.Model):
+    # COLOR_PALETTE = [
+    #     ("#FFFFFF", "white",),
+    #     ("#000000", "black",),
+    # ]
     category = models.ManyToManyField(Category, related_name='products')
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
-    image = ResizedImageField(size=[1000, 1000])
+    image = models.FileField(null=True, blank=True)
     description = RichTextField()
     price = models.IntegerField()
+    # size = models.SmallIntegerField()
+    # color = ColorField(choices=COLOR_PALETTE,null=True, blank=True)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
