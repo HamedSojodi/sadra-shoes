@@ -26,6 +26,9 @@ class Category(models.Model):
         return reverse('home:category_filter', args=[self.slug, ])
 
 
+
+
+
 @receiver(pre_save, sender=Category)
 def my_handler(sender, instance, *args, **kwargs):
     slug = slugify(instance.name)
