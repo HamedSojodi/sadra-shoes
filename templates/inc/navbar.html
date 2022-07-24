@@ -74,8 +74,10 @@
         <div class="col-lg-3 col-6 text-right">
             <a href="{% url 'orders:cart' %}" class="btn border">
                 <i class="fas fa-shopping-cart text-primary"></i>
-                <span class="badge">{{ cart|length }}</span>
+                <span class="badge"></span>
+                {{ cart|length }}
             </a>
+
 
         </div>
     </div>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block extra_headers %}
     <link href="{% static 'home/img/favicon.ico' %}" rel="icon">
@@ -65,7 +66,7 @@
                 <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
                    data-toggle="collapse" href="#navbar-vertical"
                    style="height: 65px; margin-top: -1px; padding: 0 30px;">
-                    <h6 class="m-0">Categories</h6>
+                    <h6 class="m-0">{% trans "Categories" %}</h6>
                     <i class="fa fa-angle-down text-dark"></i>
                 </a>
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0"
@@ -102,30 +103,44 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a class="nav-item nav-link" href="{% url 'home:home' %}">Home</a>
+                            <a class="nav-item nav-link" href="{% url 'home:home' %}">{% trans "Home" %}</a>
                             {% if request.user.is_admin %}
-                                <a class="nav-item nav-link" href="{% url 'home:bucket' %}">Bucket</a>
+                                <a class="nav-item nav-link" href="{% url 'home:bucket' %}">{% trans "Bucket" %}</a>
                             {% endif %}
 
 
+                            <dive>
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
 
 
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Langueges</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Enghlish</a>
-                                    <a href="#" class="dropdown-item">فارسی</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle"
+                                       data-toggle="dropdown">{% trans "Langueges" %}</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        {% for lang in languages %}
+                                        <a href="/{{ lang.code }}/" class="dropdown-item">{{ lang.name_local }}</a>
+
+                                        {% endfor %}
+                                    </div>
                                 </div>
-                            </div>
+                            </dive>
 
-                            <a class="nav-item nav-link" href="{% url 'home:contact_view' %}">Contact</a>
+
+
+
+                            <a class="nav-item nav-link" href="{% url 'home:contact_view' %}">{% trans "Contact" %}</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             {% if request.user.is_authenticated %}
-                                <a class="nav-item nav-link" href="{% url 'account:user_logout' %}">Logout</a>
+                                <a class="nav-item nav-link"
+                                   href="{% url 'account:user_logout' %}">{% trans "Logout" %}</a>
                             {% else %}
-                                <a class="nav-item nav-link" href="{% url 'account:user_register' %}">Register</a>
-                                <a class="nav-item nav-link" href="{% url 'account:user_login' %}">Login</a>
+                                <a class="nav-item nav-link"
+                                   href="{% url 'account:user_register' %}">{% trans "Register" %}</a>
+                                <a class="nav-item nav-link"
+                                   href="{% url 'account:user_login' %}">{% trans "Login" %}</a>
                             {% endif %}
                         </div>
                     </div>
@@ -133,24 +148,22 @@
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
+                            <img class="img-fluid" src="{% static 'home/img/R (2).jpg' %}" alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
-                                        Order</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">{% trans "10% Off Your First Order" %}</h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">{% trans "Fashionable Shoes" %}</h3>
+                                    <a href="" class="btn btn-light py-2 px-3">{% trans "Shop Now" %}</a>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
+                            <img class="img-fluid" src="{% static 'home/img/R (1).jpg' %}" alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
-                                        Order</h4>
-                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                                    <h4 class="text-light text-uppercase font-weight-medium mb-3">{% trans "10% Off Your First Order" %}</h4>
+                                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">{% trans "Reasonable Price" %}</h3>
+                                    <a href="" class="btn btn-light py-2 px-3">{% trans "Shop Now" %}</a>
                                 </div>
                             </div>
                         </div>
@@ -177,13 +190,13 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                    <h5 class="font-weight-semi-bold m-0">{% trans "Quality Product" %}</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                    <h5 class="font-weight-semi-bold m-0">{% trans "Free Shipping" %}</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -224,30 +237,33 @@
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:300px">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:380px">
                     <p class="text-right">15 Products</p>
-                    <a href="/category/shoes_men/{{ categories.slug }}" class="cat-img position-relative overflow-hidden mb-3">
+                    <a href="/category/shoes_men/{{ categories.slug }}"
+                       class="cat-img position-relative overflow-hidden mb-3">
                         <img class="img-fluid" src="{% static 'home/img/1.jpg' %}" alt="">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Men's Shoes</h5>
+                    <h5 class="font-weight-semi-bold m-0">{% trans "Men's Shoes" %}</h5>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:300px">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:380px">
                     <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                    <a href="/category/shoes_women-4/{{ categories.slug }}"
+                       class="cat-img position-relative overflow-hidden mb-3">
                         <img class="img-fluid w-100 h-100" src="{% static 'home/img/v.jpg' %}" alt="">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Women's Shoes</h5>
+                    <h5 class="font-weight-semi-bold m-0">{% trans "Women's Shoes" %}</h5>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 pb-1">
-                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:300px">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px; height:380px">
                     <p class="text-right">15 Products</p>
-                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid w-100 h-100" src="{% static 'home/img/cat-3.jpg' %}" alt="">
+                    <a href="/category/baby/{{ categories.slug }}"
+                       class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid w-100 h-100" src="{% static 'home/img/R.jpg' %}" alt="">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Baby's Shoes</h5>
+                    <h5 class="font-weight-semi-bold m-0">{% trans "Baby's Shoes" %}</h5>
                 </div>
             </div>
         </div>
@@ -260,11 +276,11 @@
         <div class="row justify-content-center px-xl-5">
             <div class="col-md-8 pb-4">
                 <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img class="mh-100  "  src="{% static 'home/img/sa.jpg' %}" alt="">
+                    <img class="mh-100  " src="{% static 'home/img/sa.jpg' %}" alt="">
                     <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">10% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                        <h5 class="text-uppercase text-primary mb-3">{% trans "10% off the all order" %}</h5>
+                        <h1 class="mb-4 font-weight-semi-bold">{% trans "Spring Collection" %}</h1>
+                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">{% trans "Shop Now" %}</a>
                     </div>
                 </div>
             </div>
@@ -276,7 +292,7 @@
     <!-- Products Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
+            <h2 class="section-title px-5"><span class="px-2">{% trans "Trandy Products" %}</span></h2>
         </div>
 
         <div class="row px-xl-5 pb-3">
@@ -300,9 +316,8 @@
                             <a href="{{ product.get_absolute_url }}" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-{#                             <a href="" class="btn btn-sm text-dark p-0"><i#}
-{#                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>#}
-
+                            {#                             <a href="" class="btn btn-sm text-dark p-0"><i#}
+                            {#                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>#}
 
 
                             {#                            <form action="/orders/cart/add/1/" method="post">#}

@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'ckeditor',
     'multiselectfield',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -90,7 +92,6 @@ DATABASES = {
     }
 }
 
-
 #
 # CACHES = {
 #     'default': {
@@ -100,8 +101,6 @@ DATABASES = {
 # }
 #
 # SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-
-
 
 
 # Password validation
@@ -125,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tehran'
 
@@ -141,9 +139,20 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CODE = 'en'
+LANGUAGES = (
+    ('en', _('English')),
+    ('fa', _('Farsi')),
+)
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -151,7 +160,6 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # for costomizing User model
 AUTH_USER_MODEL = 'account.User'
-
 
 # ARVAN CLOUD STORAGE
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -162,5 +170,3 @@ AWS_STORAGE_BUCKET_NAME = 'django-shop12'
 AWS_SERVICE_NAME = 's3'
 AWS_S3_FILE_OVERWRITE = False
 AWS_LOCAL_STORAGE = f'{BASE_DIR}/aws/'
-
-

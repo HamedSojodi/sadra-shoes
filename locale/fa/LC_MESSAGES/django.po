@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-24 15:06+0430\n"
+"PO-Revision-Date: 2022-07-24 15:07+0326\n"
+"Last-Translator: Anonymous User <h@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\A\settings.py:146
+msgid "English"
+msgstr "English"
+
+#: .\A\settings.py:147
+msgid "Farsi"
+msgstr "فارسی"
+
+#: .\home\templates\home\home.html:69
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\home\templates\home\home.html:106
+msgid "Home"
+msgstr "خانه"
+
+#: .\home\templates\home\home.html:108
+msgid "Bucket"
+msgstr "باگت ها"
+
+#: .\home\templates\home\home.html:115
+msgid "Langueges"
+msgstr "زبان ها"
+
+#: .\home\templates\home\home.html:139
+msgid "Contact"
+msgstr "تماس با ما"
+
+#: .\home\templates\home\home.html:143
+msgid "Logout"
+msgstr "خروج"
+
+#: .\home\templates\home\home.html:145
+msgid "Register"
+msgstr "ثبت نام"
+
+#: .\home\templates\home\home.html:146
+msgid "Login"
+msgstr "ورود"
+
+#: .\home\templates\home\home.html:157 .\home\templates\home\home.html:167
+#, python-format
+msgid "10%% Off Your First Order"
+msgstr "10% تخفیف برای اولین سفارش"
+
+#: .\home\templates\home\home.html:158
+#| msgid "Fashionable Dress"
+msgid "Fashionable Shoes"
+msgstr "کفش های مد روز"
+
+#: .\home\templates\home\home.html:159 .\home\templates\home\home.html:169
+#: .\home\templates\home\home.html:286
+msgid "Shop Now"
+msgstr "همین الان خرید میکنم!"
+
+#: .\home\templates\home\home.html:168
+msgid "Reasonable Price"
+msgstr ""
+
+#: .\home\templates\home\home.html:196
+msgid "Quality Product"
+msgstr ""
+
+#: .\home\templates\home\home.html:202
+msgid "Free Shipping"
+msgstr ""
+
+#: .\home\templates\home\home.html:249
+msgid "Men's Shoes"
+msgstr "کفش مردانه"
+
+#: .\home\templates\home\home.html:259
+msgid "Women's Shoes"
+msgstr "کفش زنانه"
+
+#: .\home\templates\home\home.html:269
+msgid "Baby's Shoes"
+msgstr "کفش بچگانه"
+
+#: .\home\templates\home\home.html:284
+#, python-format
+msgid "10%% off the all order"
+msgstr "10% تخفیف برای اولین سفارش"
+
+#: .\home\templates\home\home.html:285
+msgid "Spring Collection"
+msgstr "تخفیف پاییزی"
+
+#: .\home\templates\home\home.html:298
+msgid "Trandy Products"
+msgstr "محصولات صدرا"
