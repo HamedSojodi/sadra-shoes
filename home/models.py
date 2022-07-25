@@ -1,3 +1,4 @@
+from django.contrib.humanize.templatetags.humanize import intcomma
 from django.db import models
 from django.urls import reverse
 from ckeditor.fields import RichTextField
@@ -5,6 +6,9 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.utils.text import slugify
 from multiselectfield import MultiSelectField
+from django.utils.translation import gettext_lazy as _
+
+
 
 
 class Category(models.Model):
@@ -39,6 +43,11 @@ def my_handler(sender, instance, *args, **kwargs):
 
 
 class Product(models.Model):
+    class Meta:
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
+
+
     MY_CHOICES = ((1, 'white'),
                   (2, 'black'),
                   (3, 'red'),
@@ -75,6 +84,9 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('home:product_detile', args=[self.slug, ])
+
+    def price_formatter(self):
+        return intcomma(self.price)
 
 
 @receiver(pre_save, sender=Product)
