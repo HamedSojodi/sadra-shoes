@@ -123,3 +123,4 @@ class UserLogoutView(View):
         logout(request)
         messages.success(request, 'your logout sucessfully', 'success')
         return redirect('home:home')
+

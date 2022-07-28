@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 15:06+0430\n"
-"PO-Revision-Date: 2022-07-24 15:07+0326\n"
+"POT-Creation-Date: 2022-07-28 12:43+0430\n"
+"PO-Revision-Date: 2022-07-28 12:46+0430\n"
 "Last-Translator: Anonymous User <h@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,13 +19,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\A\settings.py:146
+#: .\A\settings.py:147
 msgid "English"
 msgstr "English"
 
-#: .\A\settings.py:147
+#: .\A\settings.py:148
 msgid "Farsi"
 msgstr "فارسی"
+
+#: .\home\models.py:16 .\home\models.py:50
+#, fuzzy
+#| msgid "Quality Product"
+msgid "Product"
+msgstr "تضمین کیفیت"
+
+#: .\home\models.py:17 .\home\models.py:51
+#, fuzzy
+#| msgid "Trandy Products"
+msgid "Products"
+msgstr "محصولات صدرا"
+
+#: .\home\models.py:26
+#, fuzzy
+#| msgid "Categories"
+msgid "category"
+msgstr "دسته بندی ها"
+
+#: .\home\models.py:27
+#, fuzzy
+#| msgid "Categories"
+msgid "categories"
+msgstr "دسته بندی ها"
 
 #: .\home\templates\home\home.html:69
 msgid "Categories"
@@ -39,74 +63,81 @@ msgstr "خانه"
 msgid "Bucket"
 msgstr "باگت ها"
 
-#: .\home\templates\home\home.html:115
+#: .\home\templates\home\home.html:120
 msgid "Langueges"
 msgstr "زبان ها"
 
-#: .\home\templates\home\home.html:139
+#: .\home\templates\home\home.html:133
 msgid "Contact"
 msgstr "تماس با ما"
 
-#: .\home\templates\home\home.html:143
+#: .\home\templates\home\home.html:138
 msgid "Logout"
 msgstr "خروج"
 
-#: .\home\templates\home\home.html:145
+#: .\home\templates\home\home.html:141
 msgid "Register"
 msgstr "ثبت نام"
 
-#: .\home\templates\home\home.html:146
+#: .\home\templates\home\home.html:143
 msgid "Login"
 msgstr "ورود"
 
-#: .\home\templates\home\home.html:157 .\home\templates\home\home.html:167
+#: .\home\templates\home\home.html:154 .\home\templates\home\home.html:164
 #, python-format
 msgid "10%% Off Your First Order"
 msgstr "10% تخفیف برای اولین سفارش"
 
-#: .\home\templates\home\home.html:158
-#| msgid "Fashionable Dress"
+#: .\home\templates\home\home.html:155
 msgid "Fashionable Shoes"
 msgstr "کفش های مد روز"
 
-#: .\home\templates\home\home.html:159 .\home\templates\home\home.html:169
-#: .\home\templates\home\home.html:286
+#: .\home\templates\home\home.html:156 .\home\templates\home\home.html:166
+#: .\home\templates\home\home.html:283
 msgid "Shop Now"
 msgstr "همین الان خرید میکنم!"
 
-#: .\home\templates\home\home.html:168
+#: .\home\templates\home\home.html:165
 msgid "Reasonable Price"
-msgstr ""
+msgstr "قیمت مناسب"
 
-#: .\home\templates\home\home.html:196
+#: .\home\templates\home\home.html:193
 msgid "Quality Product"
-msgstr ""
+msgstr "تضمین کیفیت"
 
-#: .\home\templates\home\home.html:202
+#: .\home\templates\home\home.html:199
 msgid "Free Shipping"
-msgstr ""
+msgstr "ارسال رایگان"
 
-#: .\home\templates\home\home.html:249
+#: .\home\templates\home\home.html:205
+msgid "14-Day Return"
+msgstr "14 روز امکان بازگشت"
+
+#: .\home\templates\home\home.html:211
+msgid "24/7 Support"
+msgstr "24/7 پشتیبانی"
+
+#: .\home\templates\home\home.html:246
 msgid "Men's Shoes"
 msgstr "کفش مردانه"
 
-#: .\home\templates\home\home.html:259
+#: .\home\templates\home\home.html:256
 msgid "Women's Shoes"
 msgstr "کفش زنانه"
 
-#: .\home\templates\home\home.html:269
+#: .\home\templates\home\home.html:266
 msgid "Baby's Shoes"
 msgstr "کفش بچگانه"
 
-#: .\home\templates\home\home.html:284
+#: .\home\templates\home\home.html:281
 #, python-format
 msgid "10%% off the all order"
 msgstr "10% تخفیف برای اولین سفارش"
 
-#: .\home\templates\home\home.html:285
+#: .\home\templates\home\home.html:282
 msgid "Spring Collection"
 msgstr "تخفیف پاییزی"
 
-#: .\home\templates\home\home.html:298
+#: .\home\templates\home\home.html:295
 msgid "Trandy Products"
 msgstr "محصولات صدرا"

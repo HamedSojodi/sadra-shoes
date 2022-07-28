@@ -12,6 +12,9 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
     sub_category = models.ForeignKey('self', on_delete=models.CASCADE, related_name='scategory',
                                      null=True, blank=True)
     is_sub = models.BooleanField(default=False)
@@ -20,8 +23,8 @@ class Category(models.Model):
 
     class Meta:
         ordering = ('name',)
-        verbose_name = 'category'
-        verbose_name_plural = 'categories'
+        verbose_name = _('category')
+        verbose_name_plural = _('categories')
 
     def __str__(self):
         return self.name

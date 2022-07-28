@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 15:06+0430\n"
+"POT-Creation-Date: 2022-07-28 12:43+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\A\settings.py:146
+#: .\A\settings.py:147
 msgid "English"
 msgstr ""
 
-#: .\A\settings.py:147
+#: .\A\settings.py:148
 msgid "Farsi"
+msgstr ""
+
+#: .\home\models.py:16 .\home\models.py:50
+msgid "Product"
+msgstr ""
+
+#: .\home\models.py:17 .\home\models.py:51
+msgid "Products"
+msgstr ""
+
+#: .\home\models.py:26
+msgid "category"
+msgstr ""
+
+#: .\home\models.py:27
+msgid "categories"
 msgstr ""
 
 #: .\home\templates\home\home.html:69
@@ -38,73 +54,81 @@ msgstr ""
 msgid "Bucket"
 msgstr ""
 
-#: .\home\templates\home\home.html:115
+#: .\home\templates\home\home.html:120
 msgid "Langueges"
 msgstr ""
 
-#: .\home\templates\home\home.html:139
+#: .\home\templates\home\home.html:133
 msgid "Contact"
 msgstr ""
 
-#: .\home\templates\home\home.html:143
+#: .\home\templates\home\home.html:138
 msgid "Logout"
 msgstr ""
 
-#: .\home\templates\home\home.html:145
+#: .\home\templates\home\home.html:141
 msgid "Register"
 msgstr ""
 
-#: .\home\templates\home\home.html:146
+#: .\home\templates\home\home.html:143
 msgid "Login"
 msgstr ""
 
-#: .\home\templates\home\home.html:157 .\home\templates\home\home.html:167
+#: .\home\templates\home\home.html:154 .\home\templates\home\home.html:164
 #, python-format
 msgid "10%% Off Your First Order"
 msgstr ""
 
-#: .\home\templates\home\home.html:158
+#: .\home\templates\home\home.html:155
 msgid "Fashionable Shoes"
 msgstr ""
 
-#: .\home\templates\home\home.html:159 .\home\templates\home\home.html:169
-#: .\home\templates\home\home.html:286
+#: .\home\templates\home\home.html:156 .\home\templates\home\home.html:166
+#: .\home\templates\home\home.html:283
 msgid "Shop Now"
 msgstr ""
 
-#: .\home\templates\home\home.html:168
+#: .\home\templates\home\home.html:165
 msgid "Reasonable Price"
 msgstr ""
 
-#: .\home\templates\home\home.html:196
+#: .\home\templates\home\home.html:193
 msgid "Quality Product"
 msgstr ""
 
-#: .\home\templates\home\home.html:202
+#: .\home\templates\home\home.html:199
 msgid "Free Shipping"
 msgstr ""
 
-#: .\home\templates\home\home.html:249
+#: .\home\templates\home\home.html:205
+msgid "14-Day Return"
+msgstr ""
+
+#: .\home\templates\home\home.html:211
+msgid "24/7 Support"
+msgstr ""
+
+#: .\home\templates\home\home.html:246
 msgid "Men's Shoes"
 msgstr ""
 
-#: .\home\templates\home\home.html:259
+#: .\home\templates\home\home.html:256
 msgid "Women's Shoes"
 msgstr ""
 
-#: .\home\templates\home\home.html:269
+#: .\home\templates\home\home.html:266
 msgid "Baby's Shoes"
 msgstr ""
 
-#: .\home\templates\home\home.html:284
+#: .\home\templates\home\home.html:281
 #, python-format
 msgid "10%% off the all order"
 msgstr ""
 
-#: .\home\templates\home\home.html:285
+#: .\home\templates\home\home.html:282
 msgid "Spring Collection"
 msgstr ""
 
-#: .\home\templates\home\home.html:298
+#: .\home\templates\home\home.html:295
 msgid "Trandy Products"
 msgstr ""

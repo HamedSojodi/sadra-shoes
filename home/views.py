@@ -24,7 +24,7 @@ class HomeView(View):
         if request.GET.get('search'):
             products = products.filter(body__contains=request.GET['search'])
         return render(request, 'home/home.html', {'products': products,
-                                                  'categories': categories, 'form': self.form_class,'forms':forms})
+                                                  'categories': categories, 'form': self.form_class, 'forms': forms})
     #
     # def post(self, request):
     #     images =
@@ -44,17 +44,17 @@ class HomeView(View):
 
 
 class ProductDetileView(View):
-    def get(self, request, slug,category_slug=None):
+    def get(self, request, slug, category_slug=None):
         form = CartAddForm()
         product = get_object_or_404(Product, slug=slug)
         products = Product.objects.filter(available=True)
         categories = Category.objects.filter(is_sub=False)
         if category_slug:
-
             category = Category.objects.get(slug=category_slug)
             products = products.filter(category=category)
-        return render(request, 'home/detile.html', {'product': product, 'form': form,'products': products,
-                                                  'categories': categories})
+        return render(request, 'home/detile.html', {'product': product, 'form': form, 'products': products,
+                                                    'categories': categories})
+
 
 #
 # class ProductDetileView(DetailView):
@@ -89,6 +89,7 @@ class DownloadBucketObject(IsAdminUsermixin, View):
         messages.success(request, 'your object will be download soon', 'info')
         return redirect('home:bucket')
 
+
 class HomeContactView(View):
     def get(self, request, category_slug=None):
         products = Product.objects.filter(available=True)
@@ -97,4 +98,5 @@ class HomeContactView(View):
             category = Category.objects.get(slug=category_slug)
             products = products.filter(category=category)
         return render(request, 'home/contact.html', {'products': products,
-                                                  'categories': categories})
+                                                     'categories': categories})
+
