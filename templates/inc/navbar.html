@@ -15,6 +15,8 @@
 {#        </div>#}
 {#    </div>#}
 {#</nav>#}
+{% load i18n %}
+{% load static %}
 
 
 
@@ -58,7 +60,7 @@
                 <div class="input-group">
                     <label for="id_search"></label>
                     <input type="text" name="search" required="" id="id_search" class="form-control"
-                           placeholder="Search for products">
+                           placeholder="{% trans "Search for products" %}">
                     <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <button style="background-color:white;border: white;color: lightcoral "

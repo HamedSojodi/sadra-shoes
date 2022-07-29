@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-28 12:43+0430\n"
-"PO-Revision-Date: 2022-07-28 12:46+0430\n"
+"POT-Creation-Date: 2022-07-29 14:55+0430\n"
+"PO-Revision-Date: 2022-07-29 15:01+0430\n"
 "Last-Translator: Anonymous User <h@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -55,7 +55,8 @@ msgstr "دسته بندی ها"
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: .\home\templates\home\home.html:106
+#: .\home\templates\home\home.html:106 .\templates\inc\footer.html:25
+#: .\templates\inc\footer.html:41
 msgid "Home"
 msgstr "خانه"
 
@@ -141,3 +142,68 @@ msgstr "تخفیف پاییزی"
 #: .\home\templates\home\home.html:295
 msgid "Trandy Products"
 msgstr "محصولات صدرا"
+
+#: .\templates\inc\footer.html:14
+msgid "Your trust is our honor"
+msgstr "اعتماد شما سرمایه ماست."
+
+#: .\templates\inc\footer.html:15
+msgid "emam strite"
+msgstr "خیابان امام-چهارراه امام"
+
+#: .\templates\inc\footer.html:17
+msgid "hamed@gmail.com"
+msgstr "hamed@gmail.com"
+
+#: .\templates\inc\footer.html:18
+msgid "+012 345 67890"
+msgstr "09364067949"
+
+#: .\templates\inc\footer.html:23 .\templates\inc\footer.html:39
+msgid "Quick Links"
+msgstr "لینک های سریع"
+
+#: .\templates\inc\footer.html:27 .\templates\inc\footer.html:43
+msgid "Our Shop"
+msgstr "فروشکاه ما"
+
+#: .\templates\inc\footer.html:29 .\templates\inc\footer.html:45
+msgid "Shop Detail"
+msgstr "جزییات  فروشگاه"
+
+#: .\templates\inc\footer.html:31 .\templates\inc\footer.html:47
+msgid "Shopping Cart"
+msgstr "سبد خرید"
+
+#: .\templates\inc\footer.html:33 .\templates\inc\footer.html:49
+msgid "Checkout"
+msgstr "چک باکس"
+
+#: .\templates\inc\footer.html:35 .\templates\inc\footer.html:51
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: .\templates\inc\footer.html:55
+msgid "Newsletter"
+msgstr "خبرنامه"
+
+#: .\templates\inc\footer.html:58
+msgid "Your Name"
+msgstr "نام شما"
+
+#: .\templates\inc\footer.html:62
+msgid "Your Email"
+msgstr "ایمیل شما"
+
+#: .\templates\inc\footer.html:67
+msgid "Subscribe Now"
+msgstr "اکنون مشترک شوید"
+
+#: .\templates\inc\footer.html:79
+msgid ". All Rights Reserved."
+msgstr "تمامی حقوق محفوظ است."
+
+#: .\templates\inc\navbar.html:63
+msgid "Search for products"
+msgstr "جستجو برای محصولات"

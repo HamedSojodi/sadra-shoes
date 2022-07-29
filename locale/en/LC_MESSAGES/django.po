@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-28 12:43+0430\n"
+"POT-Creation-Date: 2022-07-29 14:55+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,8 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: .\home\templates\home\home.html:106
+#: .\home\templates\home\home.html:106 .\templates\inc\footer.html:25
+#: .\templates\inc\footer.html:41
 msgid "Home"
 msgstr ""
 
@@ -131,4 +132,68 @@ msgstr ""
 
 #: .\home\templates\home\home.html:295
 msgid "Trandy Products"
+msgstr ""
+
+#: .\templates\inc\footer.html:14
+msgid "Your trust is our honor"
+msgstr ""
+
+#: .\templates\inc\footer.html:15
+msgid "emam strite"
+msgstr ""
+
+#: .\templates\inc\footer.html:17
+msgid "hamed@gmail.com"
+msgstr ""
+
+#: .\templates\inc\footer.html:18
+msgid "+012 345 67890"
+msgstr ""
+
+#: .\templates\inc\footer.html:23 .\templates\inc\footer.html:39
+msgid "Quick Links"
+msgstr ""
+
+#: .\templates\inc\footer.html:27 .\templates\inc\footer.html:43
+msgid "Our Shop"
+msgstr ""
+
+#: .\templates\inc\footer.html:29 .\templates\inc\footer.html:45
+msgid "Shop Detail"
+msgstr ""
+
+#: .\templates\inc\footer.html:31 .\templates\inc\footer.html:47
+msgid "Shopping Cart"
+msgstr ""
+
+#: .\templates\inc\footer.html:33 .\templates\inc\footer.html:49
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\inc\footer.html:35 .\templates\inc\footer.html:51
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\inc\footer.html:55
+msgid "Newsletter"
+msgstr ""
+
+#: .\templates\inc\footer.html:58
+msgid "Your Name"
+msgstr ""
+
+#: .\templates\inc\footer.html:62
+msgid "Your Email"
+msgstr ""
+
+#: .\templates\inc\footer.html:67
+msgid "Subscribe Now"
+msgstr ""
+
+#: .\templates\inc\footer.html:79
+msgid ". All Rights Reserved."
+msgstr ""
+
+#: .\templates\inc\navbar.html:63
+msgid "Search for products"
 msgstr ""

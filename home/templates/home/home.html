@@ -14,49 +14,6 @@
 {% block content %}
 
 
-    {#    <!-- Example split danger button -->#}
-    {#    {% for category in categories %}#}
-    {#        <div class="btn-group">#}
-    {#            <a href="{{ category.get_absolute_url }}" class="btn btn-danger">{{ category.name }}</a>#}
-    {#            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"#}
-    {#                    aria-expanded="false">#}
-    {#                <span class="visually-hidden">Toggle Dropdown</span>#}
-    {#            </button>#}
-    {##}
-    {#                <ul class="dropdown-menu">#}
-    {#                    {% for sub in category.scategory.all %}#}
-    {##}
-    {#                        <li><a class="dropdown-item" href="{{ sub.get_absolute_url }}">{{ sub.name }}</a></li>#}
-    {#                    {% endfor %}#}
-    {#                </ul>#}
-    {#        </div>#}
-    {##}
-    {#    {% endfor %}#}
-    {##}
-    {##}
-    {##}
-    {##}
-    {##}
-    {##}
-    {##}
-    {##}
-    {##}
-    {#            {% for cat in categories %}#}
-    {#              <a href="{{ cat.get_absolute_url }}" class="btn btn-dark">{{ cat.name }} </a>#}
-    {##}
-    {#            {% endfor %}#}
-
-    {##}
-    {#    <br/><br/>#}
-    {#        {% for product in products %}#}
-    {#            <div class="card" style="width: 20em; display:inline-block;">#}
-    {#                <img src="{{ product.image.url }}" class="card-img-top">#}
-    {#                <div class="card-body">#}
-    {#                    <a href="{{ product.get_absolute_url }}" class="card-title">{{ product.name }}</a>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        {% endfor %}#}
-
 
     <body>
     <!-- Navbar Start -->
@@ -96,7 +53,7 @@
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
                         <h1 class="m-0 display-5 font-weight-semi-bold"><span
-                                class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                                class="text-primary font-weight-bold border px-3 mr-1">Sadra</span>Shopper</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -216,23 +173,6 @@
     <!-- Featured End -->
 
 
-    <!-- Categories Start -->
-
-    {#      {% for category in categories %}#}
-    {#                            <div class="nav-item dropdown">#}
-    {#                                <a href="{{ category.get_absolute_url }}" class="nav-link"#}
-    {#                                   data-toggle="dropdown">{{ category.name }}#}
-    {#                                    <i class="fa fa-angle-down float-right mt-1"></i></a>#}
-    {#                                <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">#}
-    {#                                    {% for sub in category.scategory.all %}#}
-    {##}
-    {#                                        <a href="{{ sub.get_absolute_url }}" class="dropdown-item">{{ sub.name }}</a>#}
-    {#                                    {% endfor %}#}
-    {#                                </div>#}
-    {#                            </div>#}
-    {##}
-    {#                        {% endfor %}#}
-
 
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
@@ -316,16 +256,7 @@
                             <a href="{{ product.get_absolute_url }}" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
-                            {#                             <a href="" class="btn btn-sm text-dark p-0"><i#}
-                            {#                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>#}
 
-
-                            {#                            <form action="/orders/cart/add/1/" method="post">#}
-                            {##}
-                            {#                                <label for="id_quantity">Quantity:</label><input type="number" name="quantity" min="1"#}
-                            {#                                                                                 max="9" required="" id="id_quantity">#}
-                            {#                                <input type="submit" value="add to cart">#}
-                            {#                            </form>#}
 
 
                             <form action="{% url 'orders:cart_add' product.id %}" method="post">
